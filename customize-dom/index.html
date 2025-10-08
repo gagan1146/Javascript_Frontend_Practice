@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customize DOM with JavaScript</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2rem; }
+        #main { padding: 1rem; border: 1px solid #ccc; border-radius: 8px; }
+        button { margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <h1>Customize DOM Example</h1>
+    <div id="main">
+        <p id="message">Hello, welcome to the customizable web page!</p>
+        <button id="changeBtn">Change Message</button>
+    </div>
+    <script>
+        const btn = document.getElementById('changeBtn');
+        const msg = document.getElementById('message');
+        btn.addEventListener('click', function() {
+            msg.textContent = "The message has been changed using JavaScript!";
+            msg.style.color = "#0078D7";
+            btn.disabled = true;
+        });
+    </script>
+</body>
+</html>
